@@ -1,0 +1,134 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donation_form_themes",
+  "info": {
+    "singularName": "donation-form-theme",
+    "pluralName": "donation-form-themes",
+    "displayName": "Donation Form Theme",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "default_donation_type": {
+      "type": "enumeration",
+      "enum": [
+        "Monthly",
+        "Oneoff"
+      ],
+      "default": "Monthly",
+      "required": false
+    },
+    "allow_oneoff": {
+      "type": "boolean",
+      "default": true
+    },
+    "allow_monthly": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_phone_mandatory": {
+      "type": "boolean",
+      "default": true
+    },
+    "minimum_donor_age": {
+      "type": "integer",
+      "default": 20
+    },
+    "default_monthly_amount": {
+      "type": "integer",
+      "default": 666
+    },
+    "default_one_off_amount": {
+      "type": "integer",
+      "default": 3000
+    },
+    "monthly_amounts": {
+      "type": "string",
+      "default": "300,666,888"
+    },
+    "one_off_amounts": {
+      "type": "string",
+      "default": " 2000,3000,5000"
+    },
+    "recurring_other_min_amount": {
+      "type": "integer",
+      "default": 100
+    },
+    "one_off_other_min_amount": {
+      "type": "integer",
+      "default": 300
+    },
+    "other_max_amount": {
+      "type": "biginteger",
+      "default": "999999999"
+    },
+    "monthly_dollar_handle_1": {
+      "type": "string"
+    },
+    "monthly_dollar_handle_2": {
+      "type": "string"
+    },
+    "monthly_dollar_handle_3": {
+      "type": "string"
+    },
+    "oneoff_dollar_handle_1": {
+      "type": "string"
+    },
+    "oneoff_dollar_handle_2": {
+      "type": "string"
+    },
+    "oneoff_dollar_handle_3": {
+      "type": "string"
+    },
+    "label_cta": {
+      "type": "string",
+      "default": "立即捐助"
+    },
+    "label_title": {
+      "type": "string",
+      "default": "我願意解決塑膠污染！"
+    },
+    "label_lead": {
+      "type": "string",
+      "default": "我要捐款解決塑膠污染問題，令海洋、環境逐步回復潔淨健康。每月$200捐款支持綠色和平的項目工作，即可以慈善捐款免稅額扣稅，同時獲得「環保手作工作坊」或導賞團的機會！"
+    },
+    "label_monthly_explainer": {
+      "type": "string",
+      "default": "您的每月捐款，將幫助綠色和平推動全城走塑，減少塑膠污染。謝謝！"
+    },
+    "label_onetime_explainer": {
+      "type": "string",
+      "default": "您的捐款，將立即幫助綠色和平尋找解決塑膠污染的辦法。謝謝！"
+    },
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "campaign": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Market": {
+      "type": "enumeration",
+      "enum": [
+        "TW",
+        "HK",
+        "KR"
+      ]
+    },
+    "Language": {
+      "type": "enumeration",
+      "enum": [
+        "en_HK",
+        "zh_HK",
+        "zh_TW",
+        "ko_KR"
+      ],
+      "required": true
+    }
+  }
+}

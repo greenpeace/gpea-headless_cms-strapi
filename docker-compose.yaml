@@ -1,16 +1,19 @@
 version: '3'
 services:
   strapi:
-    image: strapi/strapi
-    environment:
-      DATABASE_CLIENT: mysql
-      DATABASE_HOST: 
-      DATABASE_PORT: 3306
-      DATABASE_NAME: strapi-prod
-      DATABASE_USERNAME: strapi
-      DATABASE_PASSWORD: 
-      DATABASE_SSL: 'false'
+    restart: always
+    build: .
     volumes:
-      - ./app:/srv/app
+      - ./app/config:/app/config
+      - ./app/database:/app/database
+      - ./app/public:/app/public
+      - ./app/src:/app/src
     ports:
       - '1337:1337'
+# volumes:
+#   node_modules:
+#     driver: local
+#     driver_opts:
+#       type: none
+#       o: bind
+#       device: ./runtime/node_modules
