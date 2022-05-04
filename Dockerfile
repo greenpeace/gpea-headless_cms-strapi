@@ -13,15 +13,12 @@ RUN apt update && apt install yarn
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# VOLUME ["/app"]
+ENV NODE_ENV production
 WORKDIR /app
+COPY app/package.json .
+RUN yarn install --production
+
 COPY app/ ./
+RUN yarn build
 
-# develop env
-RUN yarn install
-CMD yarn develop 
-
-# production env
-# ENV NODE_ENV production
-# RUN yarn install --production
-# CMD yarn develop 
+CMD yarn start
