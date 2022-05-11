@@ -110,7 +110,7 @@
     "campaign": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "Market": {
       "type": "enumeration",
@@ -129,6 +129,20 @@
         "ko_KR"
       ],
       "required": true
+    },
+    "Themes": {
+      "type": "enumeration",
+      "enum": [
+        "General",
+        "Arctic",
+        "Climate",
+        "Forests",
+        "Health",
+        "Oceans",
+        "Plastics"
+      ],
+      "required": true,
+      "default": "General"
     }
   }
 }
