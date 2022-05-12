@@ -19,51 +19,63 @@
         "Oneoff"
       ],
       "default": "Monthly",
-      "required": false
+      "required": true
     },
     "allow_oneoff": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": true
     },
     "allow_monthly": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": true
     },
     "is_phone_mandatory": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": true
     },
     "minimum_donor_age": {
       "type": "integer",
-      "default": 20
+      "default": 20,
+      "required": true
     },
     "default_monthly_amount": {
       "type": "integer",
-      "default": 666
+      "default": 100,
+      "required": true
     },
     "default_one_off_amount": {
       "type": "integer",
-      "default": 3000
+      "default": 100,
+      "required": true,
+      "max": 99999999
     },
     "monthly_amounts": {
       "type": "string",
-      "default": "300,666,888"
+      "default": "200,300,400",
+      "required": true
     },
     "one_off_amounts": {
       "type": "string",
-      "default": " 2000,3000,5000"
+      "default": "200,300,400",
+      "required": true
     },
     "recurring_other_min_amount": {
       "type": "integer",
-      "default": 100
+      "default": 100,
+      "required": true
     },
     "one_off_other_min_amount": {
       "type": "integer",
-      "default": 300
+      "default": 100,
+      "required": true
     },
     "other_max_amount": {
       "type": "biginteger",
-      "default": "999999999"
+      "default": "999999999",
+      "required": true
     },
     "monthly_dollar_handle_1": {
       "type": "string"
@@ -85,7 +97,8 @@
     },
     "label_cta": {
       "type": "string",
-      "default": "立即捐助"
+      "default": "立即捐助",
+      "required": true
     },
     "label_title": {
       "type": "string",
@@ -97,15 +110,11 @@
     },
     "label_monthly_explainer": {
       "type": "string",
-      "default": "您的每月捐款，將幫助綠色和平推動全城走塑，減少塑膠污染。謝謝！"
+      "default": "Monthly Explainer"
     },
     "label_onetime_explainer": {
       "type": "string",
-      "default": "您的捐款，將立即幫助綠色和平尋找解決塑膠污染的辦法。謝謝！"
-    },
-    "Label": {
-      "type": "string",
-      "required": true
+      "default": "Oneoff explainer"
     },
     "campaign": {
       "type": "string",
@@ -118,7 +127,8 @@
         "TW",
         "HK",
         "KR"
-      ]
+      ],
+      "required": true
     },
     "Language": {
       "type": "enumeration",
@@ -130,7 +140,7 @@
       ],
       "required": true
     },
-    "Themes": {
+    "Belong_issue": {
       "type": "enumeration",
       "enum": [
         "General",
