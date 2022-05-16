@@ -153,6 +153,12 @@
       ],
       "required": true,
       "default": "General"
+    },
+    "Campaign_Id": {
+      "type": "string",
+      "required": true,
+      "minLength": 18,
+      "maxLength": 18
     }
   }
 }
