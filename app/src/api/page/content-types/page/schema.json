@@ -12,22 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "campaign": {
-      "type": "uid",
-      "required": true
-    },
     "issue": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::issue.issue",
       "inversedBy": "pages"
-    },
-    "pageId": {
-      "type": "uid"
-    },
-    "campaignId": {
-      "type": "uid",
-      "required": true
     },
     "page_type": {
       "type": "relation",
@@ -44,11 +33,6 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.content-hero"
-    },
-    "seo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
     },
     "contentBlocks": {
       "type": "dynamiczone",
@@ -82,6 +66,27 @@
       "relation": "manyToOne",
       "target": "api::market.market",
       "inversedBy": "pages"
+    },
+    "campaign": {
+      "type": "string",
+      "required": true
+    },
+    "pageId": {
+      "type": "string",
+      "private": true
+    },
+    "campaignId": {
+      "type": "string"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "metaSocial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.meta-social"
     }
   }
 }
