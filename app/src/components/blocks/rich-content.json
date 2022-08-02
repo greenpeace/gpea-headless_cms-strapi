@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_rich_contents",
+  "info": {
+    "displayName": "richContent",
+    "icon": "atom"
+  },
+  "options": {},
+  "attributes": {
+    "richContent": {
+      "type": "richtext"
+    }
+  }
+}

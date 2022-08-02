@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_types",
+  "info": {
+    "singularName": "page-type",
+    "pluralName": "page-types",
+    "displayName": "PageType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page",
+      "mappedBy": "page_type"
+    }
+  }
+}

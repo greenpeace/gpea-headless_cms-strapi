@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_titles",
+  "info": {
+    "displayName": "title",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

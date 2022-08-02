@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "issues",
+  "info": {
+    "singularName": "issue",
+    "pluralName": "issues",
+    "displayName": "Issue",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page",
+      "mappedBy": "issue"
+    },
+    "donation_form_themes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::donation-form-theme.donation-form-theme",
+      "mappedBy": "issue"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "campaign": {
+      "type": "uid",
+      "required": true
+    },
+    "issue": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::issue.issue",
+      "inversedBy": "pages"
+    },
+    "pageId": {
+      "type": "uid"
+    },
+    "campaignId": {
+      "type": "uid",
+      "required": true
+    },
+    "page_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::page-type.page-type",
+      "inversedBy": "pages"
+    },
+    "contentHero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.content-hero"
+    },
+    "thankyouHero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.content-hero"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "contentBlocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.rich-content"
+      ]
+    },
+    "thankyouBlocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.rich-content"
+      ]
+    },
+    "petitionCta": {
+      "type": "string",
+      "default": "立即聯署",
+      "required": true
+    },
+    "fixedCta": {
+      "type": "string",
+      "required": true,
+      "default": "立即聯署"
+    },
+    "fixedThankyouCta": {
+      "type": "string",
+      "default": "立即捐款",
+      "required": true
+    },
+    "market": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::market.market",
+      "inversedBy": "pages"
+    }
+  }
+}

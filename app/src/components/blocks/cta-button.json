@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_cta_buttons",
+  "info": {
+    "displayName": "CtaButton",
+    "icon": "crosshairs"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "isExternal": {
+      "type": "boolean"
+    }
+  }
+}

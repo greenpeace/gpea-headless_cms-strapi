@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_content_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "award",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "desktopImageURL": {
+      "type": "string"
+    },
+    "mobileImageURL": {
+      "type": "string"
+    },
+    "richContent": {
+      "type": "richtext"
+    }
+  }
+}

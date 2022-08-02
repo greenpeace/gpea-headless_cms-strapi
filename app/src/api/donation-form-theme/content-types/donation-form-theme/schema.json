@@ -153,6 +153,12 @@
       ],
       "required": true,
       "default": "General"
+    },
+    "issue": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::issue.issue",
+      "inversedBy": "donation_form_themes"
     }
   }
 }

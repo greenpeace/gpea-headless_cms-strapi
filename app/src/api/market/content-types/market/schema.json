@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "markets",
+  "info": {
+    "singularName": "market",
+    "pluralName": "markets",
+    "displayName": "Market",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "market": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "market"
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page",
+      "mappedBy": "market"
+    },
+    "websignEndpointURL": {
+      "type": "string"
+    },
+    "dummyEndpointURL": {
+      "type": "string"
+    }
+  }
+}
