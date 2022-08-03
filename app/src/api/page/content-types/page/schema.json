@@ -87,6 +87,30 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.meta-social"
+    },
+    "donationModuleCampaign": {
+      "type": "string",
+      "required": true,
+      "default": "general"
+    },
+    "donationModuleEnv": {
+      "type": "enumeration",
+      "enum": [
+        "test",
+        "full",
+        "production"
+      ],
+      "default": "production",
+      "required": true
+    },
+    "donationModuleLanguage": {
+      "type": "enumeration",
+      "enum": [
+        "zh_HK",
+        "zh_TW",
+        "en_HK"
+      ],
+      "required": true
     }
   }
 }
