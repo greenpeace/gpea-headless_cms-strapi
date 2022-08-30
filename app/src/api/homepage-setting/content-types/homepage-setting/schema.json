@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepage_settings",
+  "info": {
+    "singularName": "homepage-setting",
+    "pluralName": "homepage-settings",
+    "displayName": "首頁顯示設定",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "display_kol_block": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}
