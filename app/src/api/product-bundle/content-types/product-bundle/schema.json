@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_bundles",
+  "info": {
+    "singularName": "product-bundle",
+    "pluralName": "product-bundles",
+    "displayName": "優惠合購方案",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "min": 1,
+      "default": 1,
+      "required": true
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    }
+  }
+}

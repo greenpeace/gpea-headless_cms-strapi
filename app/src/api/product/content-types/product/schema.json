@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "政見商品",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "short_name": {
+      "type": "string",
+      "required": false
+    },
+    "topics": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::topic.topic",
+      "mappedBy": "products"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "price": {
+      "type": "integer",
+      "required": true,
+      "max": 10,
+      "unique": false,
+      "min": 1,
+      "default": 1
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product-meta.image-set"
+    },
+    "ratings": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product-meta.score"
+    },
+    "feedbacks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product-meta.feedback"
+    },
+    "carbon_reduction": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 0
+    }
+  }
+}

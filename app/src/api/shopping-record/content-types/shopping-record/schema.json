@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopping_records",
+  "info": {
+    "singularName": "shopping-record",
+    "pluralName": "shopping-records",
+    "displayName": "購物紀錄",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "birthYear": {
+      "type": "integer"
+    },
+    "mobilePhone": {
+      "type": "string"
+    },
+    "campaignData1": {
+      "type": "string"
+    },
+    "campaignData2": {
+      "type": "string"
+    },
+    "campaignData3": {
+      "type": "string"
+    },
+    "campaignData4": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "key": {
+      "type": "uid"
+    }
+  }
+}
