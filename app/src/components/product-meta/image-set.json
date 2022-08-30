@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_product_meta_image_sets",
+  "info": {
+    "displayName": "ImageSet",
+    "icon": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

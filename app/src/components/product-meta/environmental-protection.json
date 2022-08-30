@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_product_meta_environmental_protections",
+  "info": {
+    "displayName": "EnvironmentalProtection",
+    "icon": "recycle"
+  },
+  "options": {},
+  "attributes": {
+    "carbon_emission_reduction": {
+      "type": "integer",
+      "required": true
+    },
+    "reduced_marine_pollution": {
+      "type": "integer",
+      "required": true
+    },
+    "clean_energy_generation": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_product_meta_scores",
+  "info": {
+    "displayName": "Score",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "rating": {
+      "type": "integer",
+      "required": true,
+      "max": 5,
+      "min": 1,
+      "default": 5
+    }
+  }
+}
