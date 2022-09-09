@@ -20,7 +20,13 @@ module.exports = createCoreController(uid, ({ strapi }) => ({
     });
 
     let mode = '';
-    let data = null;
+    let data = {
+        campaignData1: null,
+        ...(results[0] ?? {}),
+        campaignData2: args.campaignData2 ?? null,
+        campaignData3: null,
+        campaignData4: args.campaignData4 ?? null,
+    };
 
     args.campaignData3 = await getProductsName(args.campaignData4);
 
@@ -36,12 +42,12 @@ module.exports = createCoreController(uid, ({ strapi }) => ({
         });
       } while (existSameKeyResults.length > 0);
 
-      data = {email, ...args, key: rndKey};
+      data = { ...data, email, ...args, key: rndKey};
       mode = 'create';
       await strapi.entityService.create(uid, { data })
     }
     else {
-      data = { ...results[0], ...args };
+      data = { ...data, ...args };
       mode = 'update';
       await strapi.entityService.update(uid, results[0].id, { data })
     }
@@ -97,7 +103,7 @@ function capitalizeFirstLetter(string) {
 }
 
 async function getProductsName(productsString = '') {
-  const productsId = productsString.split(',');
+    const productsId = productsString.split(',');
   if (productsId.length === 0) return '';
 
   const { results: products } = await strapi.service('api::product.product').find({ pagination: { limit: 100, start: 0 }});
@@ -113,21 +119,41 @@ async function getProductsName(productsString = '') {
 async function postWebsign(data) {
   const formData = new FormData();
 
+  let dataObj = {};
+
   data.id = undefined;
   data.createAt = undefined;
   data.updateAt = undefined;
+  data.campaignId = process.env.CRM_CAMPAIGN_ID;
+  data.campaignData5 = data.key
+  data.optIn = true;
+  data.birthdate = data.birthYear && `${data.birthYear}-01-01`;
+
+  data.campaignData1__c = data.campaignData1;
+  data.campaignData2__c = data.campaignData2;
+  data.campaignData3__c = data.campaignData3;
+  data.campaignData4__c = data.campaignData4;
+  data.campaignData5__c = data.address;
 
   Object.keys(data).forEach(key => {
-    if (data[key])
+    if (data[key]) {
+      dataObj[capitalizeFirstLetter(key)] = data[key];
       formData.append(capitalizeFirstLetter(key), data[key]);
+    }
   });
 
-  formData.append('CampaignId', process.env.CRM_CAMPAIGN_ID);
-  formData.append('CampaignData5', data.key);
+  console.log(process.env.CRM_ENDPOINT, dataObj)
 
-  const res = await got.post(process.env.CRM_ENDPOINT, {
-    form: formData
-  });
+  try {
 
-  console.log(formData, res.body)
+    const res = await got.post(process.env.CRM_ENDPOINT, {
+      form: dataObj
+    });
+    console.log(res.body);
+
+  }
+  catch (e) {
+    console.error(e);
+  }
+
 }
