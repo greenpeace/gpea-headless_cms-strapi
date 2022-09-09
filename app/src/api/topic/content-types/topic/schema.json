@@ -38,6 +38,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product-bundle.product-bundle"
+    },
+    "short_name": {
+      "type": "string"
     }
   }
 }
