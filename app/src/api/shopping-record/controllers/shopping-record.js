@@ -132,8 +132,8 @@ async function postWebsign(data) {
   data.campaignData1__c = data.campaignData1;
   data.campaignData2__c = data.campaignData2;
   data.campaignData3__c = data.campaignData3;
-  data.campaignData4__c = data.campaignData4;
-  data.campaignData5__c = data.address;
+  data.campaignData4__c = data.address;
+  data.campaignData5__c = data.key;
 
   Object.keys(data).forEach(key => {
     if (data[key]) {
