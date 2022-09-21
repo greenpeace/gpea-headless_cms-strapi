@@ -15,6 +15,10 @@
     },
     "richContent": {
       "type": "richtext"
+    },
+    "richContentParagraph": {
+      "type": "richtext",
+      "maxLength": 160
     }
   }
 }
