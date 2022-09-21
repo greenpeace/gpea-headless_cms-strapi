@@ -34,6 +34,13 @@ yarn build
 
 ## ⚙️ Deployment
 
+- Push the latest files to github
+- SSH to connect to the small-service GCP VM
+- Access the Docker folder
+- `git pull` the latest files
+- `docker-compose down`
+- `docker-compose up --build -d`
+
 Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
 
 ## 📚 Learn more
