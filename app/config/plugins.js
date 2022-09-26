@@ -1,3 +1,4 @@
+// plugins.js
 module.exports = () => {
   return {
     ckeditor: {
@@ -6,18 +7,21 @@ module.exports = () => {
         plugin: {
           styles: `
         .ck-dropdown__panel {
-          max-width: 480px;
+          max-width: 440px !important;
         }`,
         },
         editor: {
-          removePlugins: [""],
           // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html
           toolbar: {
             items: [
               "undo",
               "redo",
               "|",
-              "heading",
+              "paragraph",
+              "heading1",
+              "heading2",
+              "heading3",
+              "|",
               "bold",
               "italic",
               "link",
@@ -29,6 +33,7 @@ module.exports = () => {
               "numberedList",
               "alignment",
               "horizontalLine",
+              "|",
               "StrapiMediaLib",
               "insertImage",
               "insertTable",
@@ -39,37 +44,7 @@ module.exports = () => {
               "codeBlock",
               "subscript",
               "superscript",
-              "strikethrough",
-              "specialCharacters",
               "fullScreen",
-            ],
-          },
-          // https://ckeditor.com/docs/ckeditor5/latest/features/headings.html
-          heading: {
-            options: [
-              {
-                model: "paragraph",
-                title: "Paragraph",
-                class: "ck-heading_paragraph",
-              },
-              {
-                model: "heading1",
-                view: "h1",
-                title: "Heading 1",
-                class: "ck-heading_heading1",
-              },
-              {
-                model: "heading2",
-                view: "h2",
-                title: "Heading 2",
-                class: "ck-heading_heading2",
-              },
-              {
-                model: "heading3",
-                view: "h3",
-                title: "Heading 3",
-                class: "ck-heading_heading3",
-              },
             ],
           },
           htmlSupport: {
