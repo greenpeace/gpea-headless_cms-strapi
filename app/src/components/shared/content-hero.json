@@ -19,6 +19,10 @@
     "richContentParagraph": {
       "type": "richtext",
       "maxLength": 160
+    },
+    "removeMask": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
