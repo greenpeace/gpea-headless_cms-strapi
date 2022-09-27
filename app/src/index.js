@@ -1,12 +1,11 @@
-"use strict";
-var showdown = require("showdown");
+'use strict';
+var showdown = require('showdown');
 
 function gql(chunks, ...variables) {
   return chunks.reduce(
-    (accumulator, chunk, index) =>
-      `${accumulator}${chunk}${index in variables ? variables[index] : ""}`,
-    ""
-  );
+    (accumulator, chunk, index) => `${accumulator}${chunk}${index in variables ? variables[index] : ''}`,
+    ''
+  )
 }
 
 module.exports = {
@@ -20,21 +19,25 @@ module.exports = {
     const extension = ({ nexus }) => ({
       types: [
         nexus.extendType({
+
           type: "Product",
-          definition: (t) => {
+          definition: t => {
             t.string("contentHTML", {
               description: "content 的 HTML 版",
               resolve: (root, args, ctx) => {
-                if (!root.content) return "";
+                if (!root.content) return '';
                 const converter = new showdown.Converter();
                 return converter.makeHtml(root.content);
               },
             });
           },
+
         }),
+
       ],
 
       typeDefs: gql`
+
         extend type Query {
           shoppingRecordByKey(key: String!): ShortShoppingRecord
         }
@@ -51,9 +54,23 @@ module.exports = {
             campaignData2: String
             campaignData3: String
             campaignData4: String
+            utmData: UtmData
           ): WebsignResponse
 
-          sync(key: String!, products: String): String
+          sync(
+            key: String!
+            products: String
+            utmData: UtmData
+          ): String
+        }
+
+        input UtmData {
+          utmCampaign: String
+          utmContent: String
+          utmMedium: String
+          utmSource: String
+          utmTerm: String
+          completionURL: String
         }
 
         type WebsignResponse {
@@ -78,38 +95,36 @@ module.exports = {
           shoppingRecordByKey: {
             description: "查詢購物紀錄",
             async resolve(parent, args, ctx) {
-              const record = await strapi
-                .controller("api::shopping-record.shopping-record")
-                .findByKey(args.key);
+
+              const record = await strapi.controller('api::shopping-record.shopping-record').findByKey(args.key);
 
               if (record) {
                 return {
-                  cartItems: (record.campaignData4 || "").split(","),
+                  cartItems: (record.campaignData4 || '').split(','),
                   email: record.email,
                   firstName: record.firstName,
                   lastName: record.lastName,
                   birthYear: record.birthYear,
                   mobilePhone: record.mobilePhone,
                   address: record.address,
-                };
+                }
               }
 
-              return [];
-            },
-          },
+              return []
+            }
+          }
         },
 
         Mutation: {
+
           websign: {
             description: "websign",
             async resolve(parent, args, ctx) {
-              const { mode, data } = await strapi
-                .controller("api::shopping-record.shopping-record")
-                .createOrUpdate(args);
+              const { mode, data } = await strapi.controller("api::shopping-record.shopping-record").createOrUpdate(args);
               return {
-                message: "ok",
+                message: 'ok',
                 mode,
-                key: data.key,
+                key: data.key
               };
             },
           },
@@ -117,19 +132,20 @@ module.exports = {
           sync: {
             description: "同步購物紀錄",
             async resolve(parent, args, ctx) {
-              const result = await strapi
-                .controller("api::shopping-record.shopping-record")
-                .updateCampaignData4ByKey(args.key, args.products);
+              const result = await strapi.controller('api::shopping-record.shopping-record')
+                .updateCampaignData4ByKey(args.key, args.products, args.utmData);
 
-              return result ? "ok" : "fail";
-            },
-          },
+              return result ? 'ok' : 'fail';
+            }
+          }
+
         },
+
       },
 
       resolversConfig: {
         "Query.shoppingRecordByKey": {
-          auth: false,
+          auth: false
         },
         "Mutation.websign": {
           auth: false,
@@ -138,6 +154,7 @@ module.exports = {
           auth: false,
         },
       },
+
     });
 
     strapi.plugin("graphql").service("extension").use(extension);
@@ -150,5 +167,5 @@ module.exports = {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  bootstrap(/*{ strapi }*/) { },
 };
