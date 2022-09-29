@@ -3,7 +3,7 @@ FROM phusion/baseimage:focal-1.0.0
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN apt-get update -y
 RUN apt-get install -y nodejs rsync
