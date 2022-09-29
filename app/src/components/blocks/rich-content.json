@@ -1,8 +1,9 @@
 {
   "collectionName": "components_blocks_rich_contents",
   "info": {
-    "displayName": "richContent",
-    "icon": "atom"
+    "displayName": "RichContent",
+    "icon": "atom",
+    "description": ""
   },
   "options": {},
   "attributes": {

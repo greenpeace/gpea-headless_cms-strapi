@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_slices_features_with_images",
+  "info": {
+    "displayName": "featuresWithImages",
+    "icon": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.header"
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "featuresCheck": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.features-check"
+    }
+  }
+}

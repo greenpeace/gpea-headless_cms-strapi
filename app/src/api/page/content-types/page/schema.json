@@ -37,13 +37,19 @@
     "contentBlocks": {
       "type": "dynamiczone",
       "components": [
-        "blocks.rich-content"
+        "blocks.rich-content",
+        "blocks.faq",
+        "blocks.features-with-images",
+        "blocks.features"
       ]
     },
     "thankyouBlocks": {
       "type": "dynamiczone",
       "components": [
-        "blocks.rich-content"
+        "blocks.rich-content",
+        "blocks.faq",
+        "blocks.features-with-images",
+        "blocks.features"
       ]
     },
     "petitionCta": {
@@ -95,21 +101,13 @@
     },
     "donationModuleEnv": {
       "type": "enumeration",
-      "enum": [
-        "test",
-        "full",
-        "production"
-      ],
+      "enum": ["test", "full", "production"],
       "default": "production",
       "required": true
     },
     "donationModuleLanguage": {
       "type": "enumeration",
-      "enum": [
-        "zh_HK",
-        "zh_TW",
-        "en_HK"
-      ],
+      "enum": ["zh_HK", "zh_TW", "en_HK"],
       "required": true
     }
   }
