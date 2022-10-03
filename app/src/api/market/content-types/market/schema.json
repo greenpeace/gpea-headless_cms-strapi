@@ -13,11 +13,14 @@
   "pluginOptions": {},
   "attributes": {
     "market": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "market"
+      "targetField": "market",
+      "required": true
     },
     "pages": {
       "type": "relation",
@@ -30,6 +33,17 @@
     },
     "dummyEndpointURL": {
       "type": "string"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question",
+      "mappedBy": "market"
+    },
+    "locale": {
+      "type": "string",
+      "unique": true,
+      "required": true
     }
   }
 }

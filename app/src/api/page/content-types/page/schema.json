@@ -10,7 +10,11 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "versions": {
+      "versioned": true
+    }
+  },
   "attributes": {
     "issue": {
       "type": "relation",
@@ -101,13 +105,21 @@
     },
     "donationModuleEnv": {
       "type": "enumeration",
-      "enum": ["test", "full", "production"],
+      "enum": [
+        "test",
+        "full",
+        "production"
+      ],
       "default": "production",
       "required": true
     },
     "donationModuleLanguage": {
       "type": "enumeration",
-      "enum": ["zh_HK", "zh_TW", "en_HK"],
+      "enum": [
+        "zh_HK",
+        "zh_TW",
+        "en_HK"
+      ],
       "required": true
     }
   }
