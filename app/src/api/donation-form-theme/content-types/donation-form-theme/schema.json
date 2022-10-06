@@ -160,14 +160,25 @@
       "target": "api::issue.issue",
       "inversedBy": "donation_form_themes"
     },
-    "dollar_handle": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.dollar-handle"
-    },
     "share_image": {
       "type": "media",
       "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "monthly_dollar_handle_image_sets": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "oneoff_dollar_handle_image_sets": {
+      "type": "media",
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images"
