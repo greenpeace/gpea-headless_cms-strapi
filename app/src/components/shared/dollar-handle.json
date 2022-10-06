@@ -7,18 +7,18 @@
   },
   "options": {},
   "attributes": {
-    "Amount": {
+    "amount": {
       "type": "integer",
       "default": 1,
       "required": true,
       "max": 99999999,
       "min": 1
     },
-    "DisplayName": {
+    "display_name": {
       "type": "string",
       "maxLength": 50
     },
-    "DisplayImage": {
+    "display_image": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -26,11 +26,11 @@
         "images"
       ]
     },
-    "Content": {
+    "content": {
       "type": "string",
       "maxLength": 100
     },
-    "PaymentType": {
+    "payment_type": {
       "type": "enumeration",
       "enum": [
         "Monthly",

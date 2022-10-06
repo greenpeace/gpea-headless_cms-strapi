@@ -160,18 +160,18 @@
       "target": "api::issue.issue",
       "inversedBy": "donation_form_themes"
     },
-    "dollarHandle": {
+    "dollar_handle": {
       "type": "component",
       "repeatable": true,
       "component": "shared.dollar-handle"
     },
-    "ShareImage": {
-      "allowedTypes": [
-        "images"
-      ],
+    "share_image": {
       "type": "media",
       "multiple": false,
-      "required": false
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
