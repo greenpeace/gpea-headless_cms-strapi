@@ -159,6 +159,19 @@
       "relation": "manyToOne",
       "target": "api::issue.issue",
       "inversedBy": "donation_form_themes"
+    },
+    "dollarHandle": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.dollar-handle"
+    },
+    "ShareImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
     }
   }
 }

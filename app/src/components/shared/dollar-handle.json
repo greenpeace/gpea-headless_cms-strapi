@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_shared_dollar_handles",
+  "info": {
+    "displayName": "DollarHandle",
+    "icon": "gifts",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Amount": {
+      "type": "integer",
+      "default": 1,
+      "required": true,
+      "max": 99999999,
+      "min": 1
+    },
+    "DisplayName": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "DisplayImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Content": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "PaymentType": {
+      "type": "enumeration",
+      "enum": [
+        "Monthly",
+        "Oneoff"
+      ],
+      "required": true
+    }
+  }
+}
