@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "key": {
-      "type": "uid"
-    },
     "email": {
       "type": "email",
       "private": true
