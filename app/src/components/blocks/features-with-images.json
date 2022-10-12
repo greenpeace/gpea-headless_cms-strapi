@@ -25,11 +25,6 @@
         "files",
         "videos"
       ]
-    },
-    "featuresCheck": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.features-check"
     }
   }
 }
