@@ -30,6 +30,12 @@
       "relation": "oneToMany",
       "target": "api::thought.thought",
       "mappedBy": "question"
+    },
+    "responses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::response.response",
+      "mappedBy": "question"
     }
   }
 }
