@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_carousels",
+  "info": {
+    "displayName": "CarouselSlider",
+    "icon": "gem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

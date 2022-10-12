@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_carousels",
+  "info": {
+    "displayName": "Carousel",
+    "icon": "arrow-alt-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "CarouselSlider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.carousel"
+    }
+  }
+}
