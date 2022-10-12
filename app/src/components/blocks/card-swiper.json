@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_card_swipers",
+  "info": {
+    "displayName": "CardSwiper",
+    "icon": "arrow-right"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "CardSlider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    }
+  }
+}
