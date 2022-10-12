@@ -1,17 +1,12 @@
 {
   "collectionName": "components_slices_features_with_images",
   "info": {
-    "displayName": "featuresWithImages",
+    "displayName": "featureWithImage",
     "icon": "images",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "header": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.header"
-    },
     "text": {
       "type": "text",
       "required": true
