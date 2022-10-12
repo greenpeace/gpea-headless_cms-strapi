@@ -42,18 +42,18 @@
       "type": "dynamiczone",
       "components": [
         "blocks.rich-content",
-        "blocks.faq",
-        "blocks.features-with-images",
-        "blocks.features"
+        "blocks.carousel",
+        "blocks.card-swiper",
+        "blocks.testimonial-swiper"
       ]
     },
     "thankyouBlocks": {
       "type": "dynamiczone",
       "components": [
         "blocks.rich-content",
-        "blocks.faq",
-        "blocks.features-with-images",
-        "blocks.features"
+        "blocks.carousel",
+        "blocks.card-swiper",
+        "blocks.testimonial-swiper"
       ]
     },
     "petitionCta": {
