@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_testimonial_sliders",
+  "info": {
+    "displayName": "TestimonialSlider",
+    "icon": "child"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "richtext"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

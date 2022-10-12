@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_testimonial_swipers",
+  "info": {
+    "displayName": "TestimonialSwiper",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "TestimonialSlider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.testimonial-slider"
+    }
+  }
+}
