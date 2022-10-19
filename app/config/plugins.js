@@ -22,7 +22,8 @@ module.exports = ({ env }) => ({
             "paragraph",
             "heading1",
             "heading2",
-            "heading3",
+            "heading",
+            "fontSize",
             "|",
             "bold",
             "italic",
@@ -47,6 +48,39 @@ module.exports = ({ env }) => ({
             "subscript",
             "superscript",
             "fullScreen",
+          ],
+        },
+        heading: {
+          options: [
+            {
+              model: "paragraph",
+              title: "Paragraph",
+              class: "ck-paragraph",
+            },
+            {
+              model: "small",
+              view: "small",
+              title: "Small text",
+              class: "ck-small",
+            },
+            {
+              model: "heading1",
+              view: "h1",
+              title: "Heading 1",
+              class: "ck-heading1",
+            },
+            {
+              model: "heading2",
+              view: "h2",
+              title: "Heading 2",
+              class: "ck-heading2",
+            },
+            {
+              model: "heading3",
+              view: "h3",
+              title: "Heading 3",
+              class: "ck-heading3",
+            },
           ],
         },
         htmlSupport: {
