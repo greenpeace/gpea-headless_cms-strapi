@@ -149,7 +149,8 @@
         "Forests",
         "Health",
         "Oceans",
-        "Plastics"
+        "Plastics",
+        "Nuclear"
       ],
       "required": true,
       "default": "General"
