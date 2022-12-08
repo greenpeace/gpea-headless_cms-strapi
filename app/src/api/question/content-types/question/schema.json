@@ -25,12 +25,6 @@
     "purpose": {
       "type": "string"
     },
-    "thoughts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::thought.thought",
-      "mappedBy": "question"
-    },
     "responses": {
       "type": "relation",
       "relation": "oneToMany",
