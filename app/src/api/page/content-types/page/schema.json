@@ -121,6 +121,14 @@
         "en_HK"
       ],
       "required": true
+    },
+    "pageUrl": {
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      },
+      "type": "string"
     }
   }
 }
