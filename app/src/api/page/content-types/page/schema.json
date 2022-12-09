@@ -129,6 +129,14 @@
         }
       },
       "type": "string"
+    },
+    "donationModuleCampaignId": {
+      "pluginOptions": {
+        "versions": {
+          "versioned": true
+        }
+      },
+      "type": "string"
     }
   }
 }
